@@ -1,0 +1,49 @@
+1) Python qachon paydo bolgan?
+2) Python fayllari uchun to'g'ri fayl kengaytmasi nima?
+3) Pythonda nechta DataType bor?
+4) OOP ning nechta ustuni bor?
+5) Stringning qaysi metodi sozning oldidan bosh joyni olib tashlaydi?
+6) Kodning javobi nechi boladi?\nx = 23\nnum = 0 if x > 10 else 11\nprint(num)
+
+
+
+    global points
+    await msg.answer("Savollar⬇", reply_markup=ReplyKeyboardRemove())
+    await msg.answer("1) Python qachon paydo bolgan?", reply_markup=a1)
+
+    @dp.callback_query_handler(text="a1")
+    async def df(call: CallbackQuery):
+        global points
+        points += 1
+        await call.message.answer("2) Python fayllari uchun to'g'ri fayl kengaytmasi nima?", reply_markup=a2)
+
+    @dp.callback_query_handler(text="a1-1")
+    async def nn(call: CallbackQuery):
+        global points
+        await df()
+        points -= 1
+
+
+    @dp.callback_query_handler(text="a2")
+    async def df(call: CallbackQuery):
+        global points
+        points += 1
+        await call.message.answer("3) Pythonda nechta DataType bor?", reply_markup=a3)
+
+    @dp.callback_query_handler(text="a3")
+    async def df(call: CallbackQuery):
+        global points
+        points += 1
+        await call.message.answer("4) OOP ning nechta ustuni bor?", reply_markup=a4)
+
+    @dp.callback_query_handler(text="a4")
+    async def df(call: CallbackQuery):
+        global points
+        points += 1
+        await call.message.answer("5) Stringning qaysi metodi sozning oldidan bosh joyni olib tashlaydi?", reply_markup=a5)
+
+    @dp.callback_query_handler(text="a5")
+    async def df(call: CallbackQuery):
+        global points
+        points += 1
+        await call.message.answer("6) Kodning javobi nechi boladi?\nx = 23\nnum = 0 if x > 10 else 11\nprint(num)", reply_markup="a6")
